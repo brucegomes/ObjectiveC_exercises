@@ -20,10 +20,15 @@ NS_ASSUME_NONNULL_BEGIN  // delimits this section as not having simple pointers 
 -(void) setDenominator: (int) d;  */
 
 -(void) setTO: (int) n over: (int) d;
--(void) print;
+-(void) print: (BOOL) isReduced;
 -(double) convertToNum;
--(void) add: (Fraction *) f;
+-(Fraction *) add: (Fraction *) f;
 -(void) reduce;
+
+// from exec in chap 7
+-(Fraction *) subtract: (Fraction *) f;
+-(Fraction *) multiply: (Fraction *) f;
+-(Fraction *) divide: (Fraction *) f;
 
 @end
 

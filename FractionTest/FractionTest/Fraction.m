@@ -36,7 +36,10 @@
 -(int) numerator{return numerator;}
 -(int) denominator{ return denominator;}    */
 
--(void) print{
+-(void) print: (BOOL) isReduced{
+    
+    if(isReduced == true)
+        [self reduce];
     
     NSLog(@"%i/%i", numerator, denominator);
 }
@@ -49,12 +52,53 @@
         return NAN;
 }
 
--(void) add: (Fraction*) f {
+-(Fraction *) add: (Fraction*) f {
     
     // a/b + c/d = ((a*d) + (b*c)) / (b * d)
+    Fraction *result = [[Fraction alloc] init];
     
-    numerator = ((numerator * f.denominator) + (denominator * f.numerator));
-    denominator = denominator * f.denominator;
+    result.numerator = ((numerator * f.denominator) + (denominator * f.numerator));
+    result.denominator = denominator * f.denominator;
+    
+    [result reduce];  // ps: [self reduce] would call the reduce inside this instance of Fraction class
+    
+    return result;
+}
+
+-(Fraction *) subtract: (Fraction*) f {
+    
+    Fraction * result = [[Fraction alloc] init];
+    
+    result.numerator = numerator - f.numerator;
+    result.denominator = denominator - f.denominator;
+    
+    [result reduce];
+    
+    return result;
+}
+
+-(Fraction *) multiply: (Fraction*) f {
+    
+    Fraction * result = [[Fraction alloc] init];
+    
+    result.numerator = numerator * f.numerator;
+    result.denominator = denominator * f.denominator;
+    
+    [result reduce];
+    
+    return result;
+}
+    
+-(Fraction *) divide: (Fraction*) f {
+    
+    Fraction * result = [[Fraction alloc] init];
+    
+    result.numerator = numerator * f.denominator;
+    result.denominator = denominator * f.numerator;
+    
+    [result reduce];
+    
+    return result;
 }
 
 -(void) reduce{

@@ -15,19 +15,33 @@ int main(int argc, const char * argv[]) {
         Fraction * aFraction = [[Fraction alloc] init];
         Fraction * bFraction = [[Fraction alloc] init];
         
+        Fraction * resultFraction;
+        
         // set frac to 1/3
-        [aFraction setTO: 1 over: 4];
+        [aFraction setTO: 1 over: 3];
         [bFraction setTO: 1 over: 2];
         
-        [aFraction print];
+        [aFraction print: TRUE];
         NSLog(@"+");
-        [bFraction print];
+        [bFraction print: FALSE];
         NSLog(@"=");
         
-        [aFraction add: bFraction];
+        resultFraction = [aFraction add: bFraction];
         
-        [aFraction reduce];
-        [aFraction print];
+        //[aFraction reduce];
+        [resultFraction print: TRUE];
+        
+        NSLog(@"- %i/%i", aFraction.numerator, aFraction.denominator); // result - aFrac
+        resultFraction = [resultFraction subtract: aFraction];
+        [resultFraction print: TRUE];
+        
+        NSLog(@"* %i/%i", aFraction.numerator, aFraction.denominator); // result * aFrac
+        resultFraction = [resultFraction multiply: aFraction];
+        [resultFraction print: TRUE];
+        
+        NSLog(@"/ %i/%i", aFraction.numerator, aFraction.denominator); // result / aFrac
+        resultFraction = [resultFraction divide: aFraction];
+        [resultFraction print: TRUE];
     }
     return 0;
 }
