@@ -36,6 +36,56 @@
 -(int) numerator{return numerator;}
 -(int) denominator{ return denominator;}    */
 
+-(Fraction *) add: (Fraction*) f {
+    
+    // a/b + c/d = ((a*d) + (b*c)) / (b * d)
+    Fraction *result = [[Fraction alloc] init];
+    
+    result.numerator = ((self.numerator * f.denominator) + (self.denominator * f.numerator));
+    result.denominator = self.denominator * f.denominator;
+    
+    [result reduce];  // ps: [self reduce] would call the reduce inside this instance of Fraction class
+    
+    return result;
+}
+
+-(Fraction *) subtract: (Fraction*) f {
+    
+    Fraction * result = [[Fraction alloc] init];
+    
+    result.numerator = ((self.numerator * f.denominator) - (self.denominator * f.numerator));
+    result.denominator = self.denominator * f.denominator;
+    
+    [result reduce];
+    
+    return result;
+}
+
+-(Fraction *) multiply: (Fraction*) f {
+    
+    Fraction * result = [[Fraction alloc] init];
+    
+    result.numerator = self.numerator * f.numerator;
+    result.denominator = self.denominator * f.denominator;
+    
+    [result reduce];
+    
+    return result;
+}
+
+-(Fraction *) divide: (Fraction*) f {
+    
+    Fraction * result = [[Fraction alloc] init];
+    
+    result.numerator = self.numerator * f.denominator;
+    result.denominator = self.denominator * f.numerator;
+    
+    [result reduce];
+    
+    return result;
+}
+
+
 -(void) print: (BOOL) isReduced{
     
     if(isReduced == true)
@@ -52,53 +102,19 @@
         return NAN;
 }
 
--(Fraction *) add: (Fraction*) f {
+- (NSString *)convertToString{  // simplify the fraction formating
     
-    // a/b + c/d = ((a*d) + (b*c)) / (b * d)
-    Fraction *result = [[Fraction alloc] init];
-    
-    result.numerator = ((numerator * f.denominator) + (denominator * f.numerator));
-    result.denominator = denominator * f.denominator;
-    
-    [result reduce];  // ps: [self reduce] would call the reduce inside this instance of Fraction class
-    
-    return result;
-}
-
--(Fraction *) subtract: (Fraction*) f {
-    
-    Fraction * result = [[Fraction alloc] init];
-    
-    result.numerator = numerator - f.numerator;
-    result.denominator = denominator - f.denominator;
-    
-    [result reduce];
-    
-    return result;
-}
-
--(Fraction *) multiply: (Fraction*) f {
-    
-    Fraction * result = [[Fraction alloc] init];
-    
-    result.numerator = numerator * f.numerator;
-    result.denominator = denominator * f.denominator;
-    
-    [result reduce];
-    
-    return result;
-}
-    
--(Fraction *) divide: (Fraction*) f {
-    
-    Fraction * result = [[Fraction alloc] init];
-    
-    result.numerator = numerator * f.denominator;
-    result.denominator = denominator * f.numerator;
-    
-    [result reduce];
-    
-    return result;
+    if(numerator == denominator){  // (0/...) = 0 and (x/x) = x
+        
+        if(numerator == 0)
+            return @"0";
+        else
+            return @"1";
+    }
+    else if (denominator == 1)  // (x / 1) = x
+        return [NSString stringWithFormat:@"%i", numerator];
+    else
+        return [NSString stringWithFormat: @"%i/%i", numerator, denominator];
 }
 
 -(void) reduce{

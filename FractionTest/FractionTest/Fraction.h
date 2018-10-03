@@ -22,10 +22,12 @@ NS_ASSUME_NONNULL_BEGIN  // delimits this section as not having simple pointers 
 -(void) setTO: (int) n over: (int) d;
 -(void) print: (BOOL) isReduced;
 -(double) convertToNum;
--(Fraction *) add: (Fraction *) f;
+-(NSString*) convertToString;
 -(void) reduce;
 
 // from exec in chap 7
+
+-(Fraction *) add: (Fraction *) f;
 -(Fraction *) subtract: (Fraction *) f;
 -(Fraction *) multiply: (Fraction *) f;
 -(Fraction *) divide: (Fraction *) f;
