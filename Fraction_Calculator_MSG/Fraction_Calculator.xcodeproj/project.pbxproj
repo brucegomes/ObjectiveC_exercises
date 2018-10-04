@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B7F7A612165614100C97BE8 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7F7A602165614100C97BE8 /* Stickers.xcassets */; };
-		9B7F7A652165614100C97BE8 /* calcStickerPackExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B7F7A5E2165614100C97BE8 /* calcStickerPackExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B92720D21656F0E00EF0300 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B92720C21656F0E00EF0300 /* Messages.framework */; };
+		9B92721021656F0E00EF0300 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92720F21656F0E00EF0300 /* MessagesViewController.swift */; };
+		9B92721321656F0E00EF0300 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B92721121656F0E00EF0300 /* MainInterface.storyboard */; };
+		9B92721521656F0E00EF0300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B92721421656F0E00EF0300 /* Assets.xcassets */; };
+		9B92721921656F0E00EF0300 /* CalcStickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B92720B21656F0E00EF0300 /* CalcStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B92721E216570F900EF0300 /* CalcStickerBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92721D216570F900EF0300 /* CalcStickerBrowserViewController.swift */; };
+		9B9272202165745A00EF0300 /* 01_17_NIV.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B92721F2165745A00EF0300 /* 01_17_NIV.jpg */; };
+		9B9272222165882A00EF0300 /* 06-05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B9272212165882A00EF0300 /* 06-05.jpg */; };
 		9BE8D9D521642BC800C80067 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8D9D421642BC800C80067 /* AppDelegate.m */; };
 		9BE8D9D821642BC800C80067 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8D9D721642BC800C80067 /* ViewController.m */; };
 		9BE8D9DB21642BC800C80067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE8D9D921642BC800C80067 /* Main.storyboard */; };
@@ -22,12 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9B7F7A632165614100C97BE8 /* PBXContainerItemProxy */ = {
+		9B92721721656F0E00EF0300 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9BE8D9C821642BC800C80067 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9B7F7A5D2165614100C97BE8;
-			remoteInfo = calcStickerPackExt;
+			remoteGlobalIDString = 9B92720A21656F0E00EF0300;
+			remoteInfo = CalcStickers;
 		};
 		9BE8D9E921642BCA00C80067 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9B7F7A652165614100C97BE8 /* calcStickerPackExt.appex in Embed App Extensions */,
+				9B92721921656F0E00EF0300 /* CalcStickers.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,9 +66,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9B7F7A5E2165614100C97BE8 /* calcStickerPackExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = calcStickerPackExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B7F7A602165614100C97BE8 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
-		9B7F7A622165614100C97BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B92720B21656F0E00EF0300 /* CalcStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalcStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B92720C21656F0E00EF0300 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		9B92720F21656F0E00EF0300 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		9B92721221656F0E00EF0300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9B92721421656F0E00EF0300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B92721621656F0E00EF0300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B92721D216570F900EF0300 /* CalcStickerBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcStickerBrowserViewController.swift; sourceTree = "<group>"; };
+		9B92721F2165745A00EF0300 /* 01_17_NIV.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01_17_NIV.jpg; sourceTree = "<group>"; };
+		9B9272212165882A00EF0300 /* 06-05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-05.jpg"; sourceTree = "<group>"; };
 		9BE8D9D021642BC800C80067 /* Fraction_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fraction_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE8D9D321642BC800C80067 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9BE8D9D421642BC800C80067 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +98,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B92720821656F0E00EF0300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B92720D21656F0E00EF0300 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BE8D9CD21642BC800C80067 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,17 +133,23 @@
 		9B7F7A4321653E2400C97BE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B92720C21656F0E00EF0300 /* Messages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9B7F7A5F2165614100C97BE8 /* calcStickerPackExt */ = {
+		9B92720E21656F0E00EF0300 /* CalcStickers */ = {
 			isa = PBXGroup;
 			children = (
-				9B7F7A602165614100C97BE8 /* Stickers.xcassets */,
-				9B7F7A622165614100C97BE8 /* Info.plist */,
+				9B92720F21656F0E00EF0300 /* MessagesViewController.swift */,
+				9B92721121656F0E00EF0300 /* MainInterface.storyboard */,
+				9B92721421656F0E00EF0300 /* Assets.xcassets */,
+				9B92721621656F0E00EF0300 /* Info.plist */,
+				9B92721D216570F900EF0300 /* CalcStickerBrowserViewController.swift */,
+				9B92721F2165745A00EF0300 /* 01_17_NIV.jpg */,
+				9B9272212165882A00EF0300 /* 06-05.jpg */,
 			);
-			path = calcStickerPackExt;
+			path = CalcStickers;
 			sourceTree = "<group>";
 		};
 		9BE8D9C721642BC800C80067 = {
@@ -132,7 +158,7 @@
 				9BE8D9D221642BC800C80067 /* Fraction_Calculator */,
 				9BE8D9EB21642BCA00C80067 /* Fraction_CalculatorTests */,
 				9BE8D9F621642BCA00C80067 /* Fraction_CalculatorUITests */,
-				9B7F7A5F2165614100C97BE8 /* calcStickerPackExt */,
+				9B92720E21656F0E00EF0300 /* CalcStickers */,
 				9B7F7A4321653E2400C97BE8 /* Frameworks */,
 				9BE8D9D121642BC800C80067 /* Products */,
 			);
@@ -144,7 +170,7 @@
 				9BE8D9D021642BC800C80067 /* Fraction_Calculator.app */,
 				9BE8D9E821642BCA00C80067 /* Fraction_CalculatorTests.xctest */,
 				9BE8D9F321642BCA00C80067 /* Fraction_CalculatorUITests.xctest */,
-				9B7F7A5E2165614100C97BE8 /* calcStickerPackExt.appex */,
+				9B92720B21656F0E00EF0300 /* CalcStickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,20 +216,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B7F7A5D2165614100C97BE8 /* calcStickerPackExt */ = {
+		9B92720A21656F0E00EF0300 /* CalcStickers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B7F7A662165614100C97BE8 /* Build configuration list for PBXNativeTarget "calcStickerPackExt" */;
+			buildConfigurationList = 9B92721A21656F0E00EF0300 /* Build configuration list for PBXNativeTarget "CalcStickers" */;
 			buildPhases = (
-				9B7F7A5C2165614100C97BE8 /* Resources */,
+				9B92720721656F0E00EF0300 /* Sources */,
+				9B92720821656F0E00EF0300 /* Frameworks */,
+				9B92720921656F0E00EF0300 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = calcStickerPackExt;
-			productName = calcStickerPackExt;
-			productReference = 9B7F7A5E2165614100C97BE8 /* calcStickerPackExt.appex */;
-			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+			name = CalcStickers;
+			productName = CalcStickers;
+			productReference = 9B92720B21656F0E00EF0300 /* CalcStickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
 		};
 		9BE8D9CF21642BC800C80067 /* Fraction_Calculator */ = {
 			isa = PBXNativeTarget;
@@ -217,7 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9B7F7A642165614100C97BE8 /* PBXTargetDependency */,
+				9B92721821656F0E00EF0300 /* PBXTargetDependency */,
 			);
 			name = Fraction_Calculator;
 			productName = Fraction_Calculator;
@@ -271,7 +299,7 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Gomes, Bruce";
 				TargetAttributes = {
-					9B7F7A5D2165614100C97BE8 = {
+					9B92720A21656F0E00EF0300 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 					9BE8D9CF21642BC800C80067 = {
@@ -303,17 +331,20 @@
 				9BE8D9CF21642BC800C80067 /* Fraction_Calculator */,
 				9BE8D9E721642BCA00C80067 /* Fraction_CalculatorTests */,
 				9BE8D9F221642BCA00C80067 /* Fraction_CalculatorUITests */,
-				9B7F7A5D2165614100C97BE8 /* calcStickerPackExt */,
+				9B92720A21656F0E00EF0300 /* CalcStickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B7F7A5C2165614100C97BE8 /* Resources */ = {
+		9B92720921656F0E00EF0300 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7F7A612165614100C97BE8 /* Stickers.xcassets in Resources */,
+				9B9272222165882A00EF0300 /* 06-05.jpg in Resources */,
+				9B92721521656F0E00EF0300 /* Assets.xcassets in Resources */,
+				9B92721321656F0E00EF0300 /* MainInterface.storyboard in Resources */,
+				9B9272202165745A00EF0300 /* 01_17_NIV.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +375,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B92720721656F0E00EF0300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B92721E216570F900EF0300 /* CalcStickerBrowserViewController.swift in Sources */,
+				9B92721021656F0E00EF0300 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BE8D9CC21642BC800C80067 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,10 +415,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B7F7A642165614100C97BE8 /* PBXTargetDependency */ = {
+		9B92721821656F0E00EF0300 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B7F7A5D2165614100C97BE8 /* calcStickerPackExt */;
-			targetProxy = 9B7F7A632165614100C97BE8 /* PBXContainerItemProxy */;
+			target = 9B92720A21656F0E00EF0300 /* CalcStickers */;
+			targetProxy = 9B92721721656F0E00EF0300 /* PBXContainerItemProxy */;
 		};
 		9BE8D9EA21642BCA00C80067 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -393,6 +433,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9B92721121656F0E00EF0300 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B92721221656F0E00EF0300 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		9BE8D9D921642BC800C80067 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,30 +460,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9B7F7A672165614100C97BE8 /* Debug */ = {
+		9B92721B21656F0E00EF0300 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = calcStickerPackExt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ClassroomM.Fraction-Calculator.calcStickerPackExt";
+				DEVELOPMENT_TEAM = RL334C8R6H;
+				INFOPLIST_FILE = CalcStickers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ClassroomM.Fraction-Calculator.CalcStickers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9B7F7A682165614100C97BE8 /* Release */ = {
+		9B92721C21656F0E00EF0300 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = calcStickerPackExt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ClassroomM.Fraction-Calculator.calcStickerPackExt";
+				DEVELOPMENT_TEAM = RL334C8R6H;
+				INFOPLIST_FILE = CalcStickers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ClassroomM.Fraction-Calculator.CalcStickers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -555,8 +619,10 @@
 		9BE8D9FD21642BCA00C80067 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RL334C8R6H;
 				INFOPLIST_FILE = Fraction_Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,8 +637,10 @@
 		9BE8D9FE21642BCA00C80067 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RL334C8R6H;
 				INFOPLIST_FILE = Fraction_Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -657,11 +725,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B7F7A662165614100C97BE8 /* Build configuration list for PBXNativeTarget "calcStickerPackExt" */ = {
+		9B92721A21656F0E00EF0300 /* Build configuration list for PBXNativeTarget "CalcStickers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B7F7A672165614100C97BE8 /* Debug */,
-				9B7F7A682165614100C97BE8 /* Release */,
+				9B92721B21656F0E00EF0300 /* Debug */,
+				9B92721C21656F0E00EF0300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
